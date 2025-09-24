@@ -17,10 +17,12 @@ export default function Home() {
   const [imageCache, setImageCache] = useState({});
   const [coatOfArmsImage, setCoatOfArmsImage] = useState(null);
 
-  useEffect(() => {
-    fetchData();
-    loadCoatOfArmsImage();
-  }, []);
+ useEffect(() => {
+  fetchData();
+  loadCoatOfArmsImage();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
+
 
   const fetchData = async () => {
     try {
